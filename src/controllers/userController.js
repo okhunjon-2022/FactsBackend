@@ -1,5 +1,5 @@
 const userSchema = require("../models/userSchema");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const validator = require("validator");
 const generateAuthToken = require("../middlewares/generateToken");
 
