@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const connectDB = require("../backend/src/config/db");
+const connectDB = require("./src/config/db");
 const blogRouter = require("./src/routes/blogRoute");
 const commentRouter = require("./src/routes/commentRoute");
 const userRouter = require("./src/routes/userRoute");
@@ -14,7 +14,7 @@ dotenv.config();
 //Middleware
 app.use(express.json());
 app.use(bodyParser.json({ limit: "10mb" }));
-app.use(bodyParser.urlencoded({  extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
